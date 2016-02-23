@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Hunting | Play</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="livequery.js"></script>
+<script type="text/javascript" src="hunting.js"></script>
+<style>
+body {
+	background: url(bodyBg.jpg) top center no-repeat;
+	overflow: hidden;
+	cursor: crosshair;
+}
+.bouncer {
+	position: relative;
+}
+
+#infoBar {
+	position: absolute;
+	left: 0px;
+	height: 60px;
+	width: 100px;
+	cursor: auto;
+	background: black;
+	opacity: .8;
+	z-index: 10;
+	font: 25px "Arial";
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#score {
+	position: absolute;
+	width: 50%;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#buttonHolder {
+	position: absolute;
+	left: 50%;
+	width: 50%;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#button {
+	width: 100px;
+	height: 30px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+#overlay {
+	position: fixed;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(50, 50, 50, .6);
+	z-index: 30;
+	visibility: hidden;
+	cursor: auto;
+}
+
+#menu {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background: black;
+	opacity: .8;
+	color: #eee;
+	border: 4px dashed #bbb;
+	border-radius: 10px;
+	font: 20px "Arial";
+	text-align: left;
+	z-index: 31;
+	cursor: auto;
+}
+
+li {
+	list-style: none;
+	padding-left: 20px;
+	padding-top: 20px;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div id="overlay"></div>
+<div id="container" style="width: 10px;"></div>
+<div id="infoBar">
+	<div id="score">Current Score 25</div>
+	<div id="buttonHolder">
+		<button id="button">Menu</button>
+	</div>
+</div>
+<div id="menu"></div>
+</body>
+</html>

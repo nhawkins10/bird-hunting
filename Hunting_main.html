@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Hunting | Menu</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+	//position the contianer
+	$("#container").css("left", parseInt($(document).width() / 2) - 200);
+	$("#container").css("top", $(document).height());
+	$("#container").animate({top:parseInt($(document).height() / 2) - 250}, "fast", "linear");
+	
+	//register start button click
+	$("#start").click(function() {
+		if (parseInt($("#levelSelect").attr("value")) != 0) {
+			$("#container").animate({top:$(document).height()}, "slow", "linear", function() {
+				level = $("#levelSelect").attr("value");
+				location.href = "hunting_game.html?level=" + level;
+			});
+			$("#overlay").animate({opacity:".0"}, "slow", "linear");
+		}
+	});
+	
+});
+</script>
+<style>
+body {
+	background: url(bodyBg.jpg) top center no-repeat;
+	overflow: hidden;
+	
+}
+
+li {
+	list-style: none;
+	position: relative;
+	left: -20px;
+	padding-top: 40px;
+}
+
+#container {
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	background: black;
+	opacity: .8;
+	color: #eee;
+	border: 4px dashed #bbb;
+	border-radius: 10px;
+	font: 15px "Arial";
+	text-align: center;
+}
+
+#overlay {
+	position: fixed;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(50, 50, 50, .6);
+}
+
+.headerFont {
+	font: 30px bold "Arial";
+}
+
+#start {
+	position: relative;
+	width: 100px;
+	height: 30px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div id="overlay"></div>
+<div id="container">
+	<ul>
+		<li><font class="headerFont">Bluebird Hunting</font></li>
+		<li><img src="birds/birdL.png" /></li>
+		<li>
+			Level
+			<select id="levelSelect">
+				<option value="0">Select</option>
+				<option value="1">Easy</option>
+				<option value="2">Medium</option>
+				<option value="3">Hard</option>
+				<option value="4">Insane</option>
+			</select>
+		</li>
+		<li><button id="start">Start</button></li>		
+</div>
+</div>
+</body>
+</html>
