@@ -94,14 +94,14 @@ $(document).ready(function() {
 	
 	$("#restart").click(function() {
 		$("#menu").animate({top:$(document).height()}, "fast", "linear", function() {
-			location.href = "hunting_game.html?" + level;
+			location.href = "Hunting_game.html?" + level;
 		});
 		$("#overlay").css("visibility", "hidden");
 	});
 	
 	$("#main").click(function() {
 		$("#menu").animate({top:$(document).height()}, "fast", "linear", function() {
-			location.href = "hunting_main.html";
+			location.href = "Hunting_main.html";
 		});
 	});
 	
