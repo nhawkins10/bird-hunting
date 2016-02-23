@@ -14,7 +14,7 @@ $(document).ready(function() {
 		if (parseInt($("#levelSelect").attr("value")) != 0) {
 			$("#container").animate({top:$(document).height()}, "slow", "linear", function() {
 				level = $("#levelSelect").attr("value");
-				location.href = "hunting_game.html?level=" + level;
+				location.href = "Hunting_game.html?level=" + level;
 			});
 			$("#overlay").animate({opacity:".0"}, "slow", "linear");
 		}
